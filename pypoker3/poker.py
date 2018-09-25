@@ -81,6 +81,7 @@ class Poker:
 
 class AsyncRequest(threading.Thread):
 	def __init__(self, sess, url):
+		threading.Thread.__init__(self)
 		self.sess = sess
 		self.url = url
 	
